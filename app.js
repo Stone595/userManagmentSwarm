@@ -7,8 +7,8 @@ const express = require('express');
 const path = require("path");
 
 const mongoose = require('mongoose');
-
-const db = 'mongodb://localhost/mtech'
+// change ip addres to local host if not working
+const db = 'mongodb://10.20.106.123/mtech'
 const port = process.env.PORT || 3000;
 
 const app = express()
