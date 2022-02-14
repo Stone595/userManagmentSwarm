@@ -1,5 +1,11 @@
-To create container and run
-docker run -d --rm --name users -p 3000:3000 usermanagement:latest
+deploy
+docker stack deploy -c docker_compose.yaml myapp-stack
 
-To display my website
-localhost:3000
+scale to 7
+docker service scale myapp-stack_myapp=7
+
+scale to 2
+docker service scale myapp-stack_myapp=2
+
+remove stack
+docker stack rm myapp-stack
